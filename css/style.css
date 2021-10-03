@@ -1,0 +1,99 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.home_view{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    margin: -8;
+    margin-bottom: 15px;
+}
+
+.header{
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo img{
+    width: fit-content;
+    height: 8.5vh;
+}
+
+.playerprofiles h2{
+    color: white;
+    font-family: "plaguard";
+}
+
+.playerprofiles p{
+    font-size: 1.35em;
+    vertical-align: middle;
+}
+
+#imperialhal{
+    height: 50vh;
+    margin:30px;
+    margin-bottom: 45px;
+    
+}
+
+#imperialhal img{
+    float: left;
+    height: 300px;
+    margin: 10px;
+}
+
+#imperialhal p{
+    color: white;
+    text-align: center;
+    overflow: auto;
+}
+
+#snipedown{
+    height: 50vh;
+    margin:30px;
+    margin-bottom: 45px;
+    
+}
+
+#snipedown h2{
+    text-align: right;
+}
+
+#snipedown img{
+    float: right;
+    height: 300px;
+    margin: 10px;
+}
+
+#snipedown p{
+    color: white;
+    text-align: center;
+    overflow: auto;
+}
+
+#reps{
+    height: 50vh;
+    margin:30px;
+}
+
+#reps img{
+    float: left;
+    height: 300px;
+    margin: 10px;
+}
+
+#reps p{
+    color: white;
+    text-align: center;
+    overflow: auto;
+}
+
