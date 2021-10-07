@@ -1,9 +1,19 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+hr{
+    color: white;
+    width: 75vw;
+    
+}
 
 body{
-    background-color: black;
+    background-color:black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
 }
 
 .home_view{
@@ -28,9 +38,16 @@ body{
     height: 8.5vh;
 }
 
+.playerprofiles{
+    display: flex;
+    flex-direction: column;
+}
+
 .playerprofiles h2{
     color: white;
     font-family: "plaguard";
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .playerprofiles p{
@@ -38,62 +55,176 @@ body{
     vertical-align: middle;
 }
 
-#imperialhal{
-    height: 50vh;
-    margin:30px;
-    margin-bottom: 45px;
+#playername{
+    display: flex;
+}
+
+#playername img{
+    height: 1.35em;
+    width: auto;
+    margin-top: 3px;
+    margin-bottom: 0;
     
 }
 
-#imperialhal img{
-    float: left;
-    height: 300px;
-    margin: 10px;
+#playername img:hover {
+    filter: drop-shadow(0px 0px 10px #bdbdbd);
+    transform: scale(1.1);
 }
 
-#imperialhal p{
+
+.imperialhal{
+    margin:30px;
+    margin-bottom: 45px;
+}
+
+.snipedown #playername{
+    justify-content: end;
+}
+
+.imperialhal img{
+    float: left;
+    margin: 10px;
+    width: 33vw;
+
+}
+
+.imperialhal p{
     color: white;
     text-align: center;
-    overflow: auto;
 }
 
-#snipedown{
-    height: 50vh;
+.snipedown{
     margin:30px;
     margin-bottom: 45px;
     
 }
 
-#snipedown h2{
+.snipedown h2{
     text-align: right;
 }
 
-#snipedown img{
+.snipedown img{
     float: right;
-    height: 300px;
     margin: 10px;
+    width: 33vw;
 }
 
-#snipedown p{
+.snipedown p{
     color: white;
     text-align: center;
-    overflow: auto;
 }
 
-#reps{
-    height: 50vh;
+.reps{
     margin:30px;
 }
 
-#reps img{
+.reps img{
     float: left;
-    height: 300px;
     margin: 10px;
+    width: 33vw;
 }
 
-#reps p{
+.reps p{
     color: white;
     text-align: center;
-    overflow: auto;
 }
 
+.achievements{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.achievements h2{
+    text-align: center;
+    font-family: "plaguard";
+    color: white;
+}
+
+table{
+    color: white;
+    margin: auto;
+    height: 50vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+table a{
+    color: white;
+    text-decoration: none;
+}
+
+table a:hover{
+    color:yellow;
+}
+
+.legendaryvideos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.legendaryvideos.video.row1{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.legendaryvideos.video.row2{
+    flex-direction: row;
+}
+
+@media (max-width:768px){
+    .imperialhal{
+        margin:30px;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .imperialhal img{
+        margin: auto;
+        width: 33vw;
+    }
+    
+    .imperialhal p,h2{
+        color: white;
+        text-align: center;
+    }
+    
+    .snipedown{
+        margin:30px;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .snipedown img{
+        margin: auto;
+        margin: 10px;
+        width: 33vw;
+    }
+    
+    .snipedown p,h2{
+        color: white;
+        text-align: center;
+    }
+    
+    .reps{
+        margin:30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .reps img{
+        margin: auto;
+        width: 33vw;
+        justify-self: center;
+    }
+    
+    .reps p{
+        color: white;
+        text-align: center;
+    }
+}
