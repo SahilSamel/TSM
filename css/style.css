@@ -1,10 +1,11 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
+
 hr{
     color: white;
-    width: 75vw;
-    
+    width: 60vw;
 }
 
 body{
@@ -43,6 +44,13 @@ body{
     flex-direction: column;
 }
 
+.playerprofiles .playerimg img{
+    margin: 10px;
+    width: 33vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .playerprofiles h2{
     color: white;
     font-family: "plaguard";
@@ -64,29 +72,21 @@ body{
     width: auto;
     margin-top: 3px;
     margin-bottom: 0;
-    
+    margin-left: 8px; 
+    margin-right: 8px;
 }
 
 #playername img:hover {
-    filter: drop-shadow(0px 0px 10px #bdbdbd);
+    filter: drop-shadow(0px 0px 10px #9b9b9b);
     transform: scale(1.1);
 }
 
-
 .imperialhal{
-    margin:30px;
-    margin-bottom: 45px;
-}
-
-.snipedown #playername{
-    justify-content: end;
-}
-
-.imperialhal img{
-    float: left;
-    margin: 10px;
-    width: 33vw;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
 }
 
 .imperialhal p{
@@ -95,19 +95,28 @@ body{
 }
 
 .snipedown{
-    margin:30px;
-    margin-bottom: 45px;
-    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .snipedown h2{
     text-align: right;
 }
 
-.snipedown img{
+.snipedown .playerimg img{
     float: right;
     margin: 10px;
     width: 33vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.snipedown #playername{
+    justify-content: end;
 }
 
 .snipedown p{
@@ -116,13 +125,11 @@ body{
 }
 
 .reps{
-    margin:30px;
-}
-
-.reps img{
-    float: left;
-    margin: 10px;
-    width: 33vw;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .reps p{
@@ -147,7 +154,7 @@ table{
     margin: auto;
     height: 50vh;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 table a{
@@ -160,71 +167,105 @@ table a:hover{
 }
 
 .legendaryvideos{
-    display: grid;
+    display:grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    justify-content: center;
+    grid-template-rows: 33% 33% 33%;
 }
 
-.legendaryvideos.video.row1{
-    flex-direction: row;
-    justify-content: center;
+.legendaryvideos iframe{
+    height: 315px;
+    width: 560px;
 }
 
-.legendaryvideos.video.row2{
-    flex-direction: row;
+.legendaryvideos .row1{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-@media (max-width:768px){
+.legendaryvideos .row2{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.legendaryvideos .row3{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .legendaryvideos{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .legendaryvideos{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+    }
+
+}
+
+@media (max-width:767px){
+    .playerprofiles .playerimg img{
+        margin: 10px;
+        width: 33vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .imperialhal{
-        margin:30px;
-        margin-bottom: 45px;
-        display: flex;
         flex-direction: column;
     }
-    
-    .imperialhal img{
-        margin: auto;
-        width: 33vw;
-    }
-    
-    .imperialhal p,h2{
-        color: white;
-        text-align: center;
+
+    .imperialhal .playerimg img{
+        width:100%;
     }
     
     .snipedown{
-        margin:30px;
-        margin-bottom: 45px;
-        display: flex;
         flex-direction: column;
     }
-    
-    .snipedown img{
-        margin: auto;
-        margin: 10px;
-        width: 33vw;
+
+    .snipedown .playerimg img{
+        width:100%;
     }
-    
-    .snipedown p,h2{
-        color: white;
-        text-align: center;
+
+    #playername{
+        justify-content: center;
     }
-    
+
+    .snipedown #playername{
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
     .reps{
-        margin:30px;
-        display: flex;
         flex-direction: column;
     }
-    
-    .reps img{
-        margin: auto;
-        width: 33vw;
-        justify-self: center;
+
+    .reps .playerimg img{
+        width:100%;
     }
-    
-    .reps p{
-        color: white;
-        text-align: center;
+
+    .legendaryvideos{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+    }
+}
+
+@media (max-width:600px){
+    .legendaryvideos iframe{
+        height: auto;
+        width: 300px;
     }
 }
