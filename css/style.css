@@ -18,6 +18,7 @@ body{
 }
 
 .home_view{
+    background-image: url('/images/homeview.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
